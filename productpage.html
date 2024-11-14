@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppify</title>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+   <section class="sidebars">
+        <div class="side-icon">
+            <img src="images/menu icon.png"/>
+            <a href="">Menu</a>
+        </div>
+        <div class="side-icon">
+            <img src="images/home.png"/>
+            <a href="/">Home</a>
+        </div>
+        <div class="side-icon">
+            <img src="images/notification.png"/>
+            <a href="">Notifications</a>
+        </div>
+        <div class="side-icon">
+            <img src="images/subscribe.png"/>
+            <a href="">subscribe</a>
+        </div>
+   </section> 
+   <section class="main">
+        <section class="hero">
+            <section class="nav">
+                <div class="nav">
+                    <img src="images/line-chart.png"/>
+                    <span>shoppify</span>
+                </div>
+
+                <div class="rec">  
+                    <input type="search"/>
+                    <img src="images/search-interface-symbol.png"/>
+                </div>
+                <div class="mic">
+                    <img src="images/microphone.png"/>
+                </div>
+                <div class="acc">
+                    <img src="images/user (2).png"/>
+                    <span>Account</span>
+                </div>
+                <div class="cart">
+                    <img src="images/cart.png"/>
+                    <span>Cart</span>
+                </div>
+              
+            </section>
+
+            <section>
+                <section class="tabs">
+                    <span>Categories</span>
+                    <span>Deals</span>
+                    <span>Whats new</span>
+                    <span>Delivery</span>
+                    <span>Gallary</span> 
+        
+                </section>
+            </section>
+            
+        </section>
+
+        <section class="products">
+           <div>
+                <div class="sales">
+                    <img src="images/oraimo powerbank.jpeg"/>   
+                </div>
+                <div class="names">
+                    <h1>Oriamo powerbank</h1>
+                    <p>It is fast and durable</p>
+                    <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span>4/5</span> <br>
+                    <button onclick="submit()">Confirm</button>   
+                </div>
+           </div>
+           <script>
+            const submit = () =>{
+             window.location.href='http://127.0.0.1:5500/addedcart.html'
+            }
+           </script>
+        </section>
