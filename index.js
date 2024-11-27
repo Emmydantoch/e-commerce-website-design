@@ -1,8 +1,14 @@
 
 const submit = () =>{
-    window.location.href='http://127.0.0.1:5500/productpage.html'
+    e = window.event
+    button = e.target
+    console.log(button.parentElement)
+    // window.location.href='http://127.0.0.1:5500/productpage.html'
 }
 
 // const submit = () =>{
-//     window.location.href='http://127.0.0.1:5500/addedcart.html'
+//     e = window.event
+//     button = e.target
+//     console.log(button.parentElement)
+//     window.location.href='http://127.0.0.1:5500/productpage.html'
 // }
