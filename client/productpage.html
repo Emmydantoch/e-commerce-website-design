@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoppify</title>
+
+    <link rel="stylesheet" href="index.css">
+    <script src="productside.js" defer></script>
+</head>
+
+<body>
+    <section class="sidebars">
+        <!-- <div class="side-icon">
+            <img src="images/menu icon.png"/>
+            <a href="">Menu</a>
+        </div> -->
+        <div class="nav">
+            <img src="images/line-chart.png" />
+            <span>shoppify</span>
+        </div>
+        <div class="side-icon">
+            <img src="images/home.png" />
+            <a href="/">Home</a>
+        </div>
+        <div class="side-icon">
+            <img src="images/notification.png" />
+            <a href="">Notifications</a>
+        </div>
+        <div class="side-icon">
+            <img src="images/subscribe.png" />
+            <a href="">subscribe</a>
+        </div>
+    </section>
+    <section class="main">
+        <section class="hero">
+            <section class="nav">
+                <!-- <div class="rec">  
+                    <input type="search"/>
+                    <img src="images/search-interface-symbol.png"/>
+                </div>
+                <div class="mic">
+                    <img src="images/microphone.png"/>
+                </div>
+                <div class="acc">
+                    <img src="images/user (2).png"/>
+                    <span>Account</span>
+                </div> -->
+                <div class="cart">
+                    <img src="images/bac cart.png" />
+                    <!-- <span>Cart</span> -->
+                </div>
+
+            </section>
+
+            <section>
+                <section class="tabs">
+                    <span>Categories</span>
+                    <span>Deals</span>
+                    <span>Whats new</span>
+                    <span>Delivery</span>
+                    <span>Gallary</span>
+
+                </section>
+            </section>
+
+        </section>
+
+        <section class="products">
+            <div>
+                <div class="sales">
+                    <img src="images/oraimo powerbank.jpeg" />
+                </div>
+                <div id="container" class="Oriamo">
+                    <h1>Oriamo powerbank</h1>
+                    <p>It is fast and durable</p>
+                    <!-- <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span><img src="images/star back.png"></span>
+                    <span>4/5</span> <br> -->
+
+                    <div class="btngrp">
+                        <button onclick="
+                    cartQuantity = cartQuantity - 1 ;
+                    document.getElementById('cartValue').innerText = cartQuantity
+                    console.log(cartQuantity - 1);
+                    ">-</button>
+
+                        <button id="cartValue" onclick="
+                    console.log(cartQuantity = cartQuantity);
+                    "></button>
+
+                        <button onclick="
+                    cartQuantity = cartQuantity + 1;
+                    document.getElementById('cartValue').innerText = cartQuantity
+                    console.log(cartQuantity + 1 );
+                    ">+</button>
+                    </div>
+
+                    <button onclick="
+                    cartQuantity = 0;
+                    console.log(`cart was reset`);
+                    console.log(`Cart quantity: $(cartQuantity)`);
+                    ">Reset Cart</button>
+
+
+                    <button id="SUBMIT" onclick="gotoindexhtmlpage()">Checkout</button>
+                </div>
+
+            </div>
+            <div>
+
+            </div>
+            <script>
+                let cartQuantity = 0;
+
+                document.getElementById('cartValue').innerText = cartQuantity
+                const gotoindexhtmlpage = () => {
+                    window.location.href = 'http://127.0.0.1:5501/index.html'
+                }
+            </script>
+        </section>

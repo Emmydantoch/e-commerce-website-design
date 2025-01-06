@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+  <figure><img src="images/bg-main-desktop.png" alt=""></figure>
+    <div class="form">
+        <button>Sign Up</button>
+        <div>
+          <label for="email">e-mail</label>
+          <input type="text" placeholder="e.g. james@gmail" id="email">
+          <p id="eml1">Can't be blank</p> 
+          <p id="eml2">Wrong format, letters only</p>
+        </div>
+    
+        <div>
+          <label for="username">user name</label>
+          <input type="text" id="username" placeholder="e.g. jammy">
+          <p id="user1">Can't be blank</p>
+          <p id="user2">Wrong format, numbers and letters only</p>
+        </div>
+    
+        <div>
+            <label for="phonenumber">phone number</label>
+            <input type="text" id="phonenumber" placeholder="e.g. 08135898273">
+            <p id="phne1">Can't be blank</p>
+            <p id="phne2">Wrong format, numbers only</p>
+          </div>
+    
+          <div>
+            <label for="password">password</label>
+            <input type="text" id="password" placeholder="e.g. 222211113333">
+            <p id="psw1">Can't be blank</p>
+            <p id="psw2">Wrong format, numbers only</p>
+          </div>
+    
+          <div>
+            <label for="confirmPassword">confirm Password</label>
+            <input type="text" id="cardnumber" placeholder="e.g. 222211113333">
+            <p id="psw1">Can't be blank</p>
+            <p id="psw2">Wrong format, numbers only</p>
+          </div>
+
+          <button>Sign In</button>
+    <div>
+        <div>
+            <label for="password">password</label>
+            <input type="text" id="password" placeholder="e.g. 222211113333">
+            <p id="psw1">Can't be blank</p>
+            <p id="psw2">Wrong format, numbers only</p>
+          </div>
+    
+          <div>
+            <label for="confirmPassword">confirm Password</label>
+            <input type="text" id="cardnumber" placeholder="e.g. 222211113333">
+            <p id="psw1">Can't be blank</p>
+            <p id="psw2">Wrong format, numbers only</p>
+          </div>
+    </div> 
+    
+    </div>   
+    
+        
+</body>
+
+<script>
+ email = document.getElementById('email') 
+ username = document.getElementById('username') 
+ phonenumber = document.getElementById('phonenumber') 
+ password = document.getElementById('password') 
+ confirmpassword = document.getElementById('confirmpassword') 
+
+ eml1 = document.getElementById('eml1') 
+ eml2 = document.getElementById('eml2') 
+ use1 = document.getElementById('use1') 
+ use2 = document.getElementById('use2') 
+ phne1 = document.getElementById('phne1') 
+ phne2 = document.getElementById('phne2') 
+ psw1 = document.getElementById('psw1') 
+ psw2 = document.getElementById('psw2') 
+ paw1 = document.getElementById('paw1') 
+ paw2 = document.getElementById('paw2') 
+
+ const emailValidation = () => {
+    if (email.value){
+      if(/\d/.test (email.value)){
+        email.style.borderColor = 'hsl(0, 100%, 66%)'
+        email.outlineColor = 'hsl(0, 100%, 66%)'
+        eml2.style.display = 'block'
+        eml1.style.display = 'none'
+        return false
+      } else{
+        email.style.border = 'hsl(278, 94%, 30%)'
+        email.sytle.outlineColor = 'hsl(278, 94%, 30%)'
+        eml1.style.display = 'none'
+        eml2.style.display = 'none'
+        return true
+      }
+    }else{
+        email.style.border = 'hsl(0, 100%, 66%)'
+        email.style.diplay = 'hsl(0, 100%, 66%)'
+        eml1.style.display = 'block'
+        eml2.style.display = 'none'
+        return false
+    }
+ }
+
+ const usernameValidation = () => {
+    if (username.value){
+      if(/\d/.test (username.value)){
+        username.style.borderColor = 'hsl(0, 100%, 66%)'
+        username.outlineColor = 'hsl(0, 100%, 66%)'
+        use2.style.display = 'block'
+        use1.style.display = 'none'
+        return false
+      } else{
+        username.style.border = 'hsl(278, 94%, 30%)'
+        username.sytle.outlineColor = 'hsl(278, 94%, 30%)'
+        use1.style.display = 'none'
+        use2.style.display = 'none'
+        return true
+      }
+    }else{
+        username.style.border = 'hsl(0, 100%, 66%)'
+        username.style.diplay = 'hsl(0, 100%, 66%)'
+        use1.style.display = 'block'
+        use2.style.display = 'none'
+        return false
+    }
+ }
+
+ const phonenumberValidation = () => {
+    if (phonenumber.value){
+      if(/[a-zA-Z]/.test (phonenumber.value)){
+        phonenumber.style.borderColor = 'hsl(0, 100%, 66%)'
+        phonenumber.outlineColor = 'hsl(0, 100%, 66%)'
+        phne2.style.display = 'block'
+        phne1.style.display = 'none'
+        return false
+      } else{
+        phonenumber.style.border = 'hsl(278, 94%, 30%)'
+        phonenumber.sytle.outlineColor = 'hsl(278, 94%, 30%)'
+        phne1.style.display = 'none'
+        phne2.style.display = 'none'
+        return true
+      }
+    }else{
+        phonenumber.style.border = 'hsl(0, 100%, 66%)'
+        phonenumber.style.diplay = 'hsl(0, 100%, 66%)'
+        phne1.style.display = 'block'
+        phne2.style.display = 'none'
+        return false
+    }
+ }
+
+ const passwordValidation = () => {
+    if (password.value){
+      if(/[a-zA-Z]/.test (password.value)){
+        password.style.borderColor = 'hsl(0, 100%, 66%)'
+        password.outlineColor = 'hsl(0, 100%, 66%)'
+        psw2.style.display = 'block'
+        psw1.style.display = 'none'
+        return false
+      } else{
+        password.style.border = 'hsl(278, 94%, 30%)'
+        password.sytle.outlineColor = 'hsl(278, 94%, 30%)'
+        psw1.style.display = 'none'
+        psw2.style.display = 'none'
+        return true
+      }
+    }else{
+        password.style.border = 'hsl(0, 100%, 66%)'
+        password.style.diplay = 'hsl(0, 100%, 66%)'
+        psw1.style.display = 'block'
+        psw2.style.display = 'none'
+        return false
+    }
+ }
+
+ const confirmpasswordValidation = () => {
+    if (confirmPassword.value){
+      if(/[a-zA-Z]/.test (confirmPassword.value)){
+        confirmPassword.style.borderColor = 'hsl(0, 100%, 66%)'
+        confirmPassword.outlineColor = 'hsl(0, 100%, 66%)'
+        paw2.style.display = 'block'
+        paw1.style.display = 'none'
+        return false
+      } else{
+        confirmPassword.style.border = 'hsl(278, 94%, 30%)'
+        confirmPassword.sytle.outlineColor = 'hsl(278, 94%, 30%)'
+        paw1.style.display = 'none'
+        paw2.style.display = 'none'
+        return true
+      }
+    }else{
+        confirmPassword.style.border = 'hsl(0, 100%, 66%)'
+        confirmPassword.style.diplay = 'hsl(0, 100%, 66%)'
+        paw1.style.display = 'block'
+        paw2.style.display = 'none'
+        return false
+    }
+ }
+
+ email.addEventListener('input', emailValidation)
+ username.addEventListener('input', usernameValidation)
+ phonenumber.addEventListener('input', phonenumberValidation)
+ password.addEventListener('input', passwordValidation)
+ confirmpassword.addEventListener('input', confirmpasswordValidation)
+
+</script>
+
+</html>
